@@ -26,27 +26,27 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.macnumrev_lbl = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.yes_btn = New System.Windows.Forms.Button()
+        Me.no_btn = New System.Windows.Forms.Button()
+        Me.macnum_lbl = New System.Windows.Forms.Label()
+        Me.technician_lbl = New System.Windows.Forms.Label()
+        Me.reason_lbl = New System.Windows.Forms.Label()
+        Me.reason_rtb = New System.Windows.Forms.RichTextBox()
+        Me.macnum_txt = New System.Windows.Forms.TextBox()
+        Me.technician_txt = New System.Windows.Forms.TextBox()
+        Me.Proceed_btn = New System.Windows.Forms.Button()
+        Me.partition_lbl = New System.Windows.Forms.Label()
+        Me.partition_cb = New System.Windows.Forms.ComboBox()
+        Me.refresh_btn = New System.Windows.Forms.Button()
+        Me.date_dtp = New System.Windows.Forms.DateTimePicker()
+        Me.folder_btn = New System.Windows.Forms.Button()
+        Me.location_txt = New System.Windows.Forms.TextBox()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.browse_lbl = New System.Windows.Forms.Label()
+        Me.partition_btn = New System.Windows.Forms.Button()
+        Me.browse_btn = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -80,14 +80,14 @@ Partial Class Form1
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Label2"
         '
-        'Label3
+        'macnumrev_lbl
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(149, 175)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(123, 17)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Machine Number: "
+        Me.macnumrev_lbl.AutoSize = True
+        Me.macnumrev_lbl.Location = New System.Drawing.Point(149, 175)
+        Me.macnumrev_lbl.Name = "macnumrev_lbl"
+        Me.macnumrev_lbl.Size = New System.Drawing.Size(123, 17)
+        Me.macnumrev_lbl.TabIndex = 3
+        Me.macnumrev_lbl.Text = "Machine Number: "
         '
         'Label4
         '
@@ -98,180 +98,180 @@ Partial Class Form1
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Would you like to use it?"
         '
-        'Button1
+        'yes_btn
         '
-        Me.Button1.Location = New System.Drawing.Point(389, 202)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Yes"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.yes_btn.Location = New System.Drawing.Point(389, 202)
+        Me.yes_btn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.yes_btn.Name = "yes_btn"
+        Me.yes_btn.Size = New System.Drawing.Size(75, 23)
+        Me.yes_btn.TabIndex = 5
+        Me.yes_btn.Text = "Yes"
+        Me.yes_btn.UseVisualStyleBackColor = True
         '
-        'Button2
+        'no_btn
         '
-        Me.Button2.Location = New System.Drawing.Point(483, 202)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "No"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.no_btn.Location = New System.Drawing.Point(483, 202)
+        Me.no_btn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.no_btn.Name = "no_btn"
+        Me.no_btn.Size = New System.Drawing.Size(75, 23)
+        Me.no_btn.TabIndex = 6
+        Me.no_btn.Text = "No"
+        Me.no_btn.UseVisualStyleBackColor = True
         '
-        'Label5
+        'macnum_lbl
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(149, 238)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(153, 17)
-        Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Type machine number:"
+        Me.macnum_lbl.AutoSize = True
+        Me.macnum_lbl.Location = New System.Drawing.Point(149, 238)
+        Me.macnum_lbl.Name = "macnum_lbl"
+        Me.macnum_lbl.Size = New System.Drawing.Size(153, 17)
+        Me.macnum_lbl.TabIndex = 7
+        Me.macnum_lbl.Text = "Type machine number:"
         '
-        'Label6
+        'technician_lbl
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(149, 268)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(227, 17)
-        Me.Label6.TabIndex = 8
-        Me.Label6.Text = "Type your name (surname, name):"
+        Me.technician_lbl.AutoSize = True
+        Me.technician_lbl.Location = New System.Drawing.Point(149, 268)
+        Me.technician_lbl.Name = "technician_lbl"
+        Me.technician_lbl.Size = New System.Drawing.Size(227, 17)
+        Me.technician_lbl.TabIndex = 8
+        Me.technician_lbl.Text = "Type your name (surname, name):"
         '
-        'Label7
+        'reason_lbl
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(149, 377)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(143, 17)
-        Me.Label7.TabIndex = 9
-        Me.Label7.Text = "Write backup reason:"
+        Me.reason_lbl.AutoSize = True
+        Me.reason_lbl.Location = New System.Drawing.Point(149, 377)
+        Me.reason_lbl.Name = "reason_lbl"
+        Me.reason_lbl.Size = New System.Drawing.Size(143, 17)
+        Me.reason_lbl.TabIndex = 9
+        Me.reason_lbl.Text = "Write backup reason:"
         '
-        'RichTextBox1
+        'reason_rtb
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(152, 406)
-        Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(385, 85)
-        Me.RichTextBox1.TabIndex = 10
-        Me.RichTextBox1.Text = ""
+        Me.reason_rtb.Location = New System.Drawing.Point(152, 406)
+        Me.reason_rtb.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.reason_rtb.Name = "reason_rtb"
+        Me.reason_rtb.Size = New System.Drawing.Size(385, 85)
+        Me.reason_rtb.TabIndex = 10
+        Me.reason_rtb.Text = ""
         '
-        'TextBox1
+        'macnum_txt
         '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(389, 234)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(160, 22)
-        Me.TextBox1.TabIndex = 11
+        Me.macnum_txt.Enabled = False
+        Me.macnum_txt.Location = New System.Drawing.Point(389, 234)
+        Me.macnum_txt.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.macnum_txt.Name = "macnum_txt"
+        Me.macnum_txt.Size = New System.Drawing.Size(160, 22)
+        Me.macnum_txt.TabIndex = 11
         '
-        'TextBox2
+        'technician_txt
         '
-        Me.TextBox2.Location = New System.Drawing.Point(389, 265)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(160, 22)
-        Me.TextBox2.TabIndex = 12
+        Me.technician_txt.Location = New System.Drawing.Point(389, 265)
+        Me.technician_txt.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.technician_txt.Name = "technician_txt"
+        Me.technician_txt.Size = New System.Drawing.Size(160, 22)
+        Me.technician_txt.TabIndex = 12
         '
-        'Button3
+        'Proceed_btn
         '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(208, 511)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(277, 57)
-        Me.Button3.TabIndex = 13
-        Me.Button3.Text = "Proceed"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Proceed_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Proceed_btn.Location = New System.Drawing.Point(208, 511)
+        Me.Proceed_btn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Proceed_btn.Name = "Proceed_btn"
+        Me.Proceed_btn.Size = New System.Drawing.Size(277, 57)
+        Me.Proceed_btn.TabIndex = 13
+        Me.Proceed_btn.Text = "Proceed"
+        Me.Proceed_btn.UseVisualStyleBackColor = True
         '
-        'Label8
+        'partition_lbl
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Enabled = False
-        Me.Label8.Location = New System.Drawing.Point(149, 300)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(156, 17)
-        Me.Label8.TabIndex = 14
-        Me.Label8.Text = "Select backup partition:"
+        Me.partition_lbl.AutoSize = True
+        Me.partition_lbl.Enabled = False
+        Me.partition_lbl.Location = New System.Drawing.Point(149, 300)
+        Me.partition_lbl.Name = "partition_lbl"
+        Me.partition_lbl.Size = New System.Drawing.Size(156, 17)
+        Me.partition_lbl.TabIndex = 14
+        Me.partition_lbl.Text = "Select backup partition:"
         '
-        'ComboBox1
+        'partition_cb
         '
-        Me.ComboBox1.Enabled = False
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(309, 297)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(63, 24)
-        Me.ComboBox1.TabIndex = 15
+        Me.partition_cb.Enabled = False
+        Me.partition_cb.FormattingEnabled = True
+        Me.partition_cb.Location = New System.Drawing.Point(309, 297)
+        Me.partition_cb.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.partition_cb.Name = "partition_cb"
+        Me.partition_cb.Size = New System.Drawing.Size(63, 24)
+        Me.partition_cb.TabIndex = 15
         '
-        'Button4
+        'refresh_btn
         '
-        Me.Button4.Enabled = False
-        Me.Button4.Location = New System.Drawing.Point(389, 297)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 16
-        Me.Button4.Text = "Refresh"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.refresh_btn.Enabled = False
+        Me.refresh_btn.Location = New System.Drawing.Point(389, 297)
+        Me.refresh_btn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.refresh_btn.Name = "refresh_btn"
+        Me.refresh_btn.Size = New System.Drawing.Size(75, 23)
+        Me.refresh_btn.TabIndex = 16
+        Me.refresh_btn.Text = "Refresh"
+        Me.refresh_btn.UseVisualStyleBackColor = True
         '
-        'DateTimePicker1
+        'date_dtp
         '
-        Me.DateTimePicker1.CustomFormat = ""
-        Me.DateTimePicker1.Enabled = False
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(449, 167)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(107, 22)
-        Me.DateTimePicker1.TabIndex = 17
-        Me.DateTimePicker1.Visible = False
+        Me.date_dtp.CustomFormat = ""
+        Me.date_dtp.Enabled = False
+        Me.date_dtp.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.date_dtp.Location = New System.Drawing.Point(449, 167)
+        Me.date_dtp.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.date_dtp.Name = "date_dtp"
+        Me.date_dtp.Size = New System.Drawing.Size(107, 22)
+        Me.date_dtp.TabIndex = 17
+        Me.date_dtp.Visible = False
         '
-        'Button5
+        'folder_btn
         '
-        Me.Button5.Enabled = False
-        Me.Button5.Location = New System.Drawing.Point(385, 346)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(32, 28)
-        Me.Button5.TabIndex = 18
-        Me.Button5.Text = "..."
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.folder_btn.Enabled = False
+        Me.folder_btn.Location = New System.Drawing.Point(385, 346)
+        Me.folder_btn.Margin = New System.Windows.Forms.Padding(4)
+        Me.folder_btn.Name = "folder_btn"
+        Me.folder_btn.Size = New System.Drawing.Size(32, 28)
+        Me.folder_btn.TabIndex = 18
+        Me.folder_btn.Text = "..."
+        Me.folder_btn.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'location_txt
         '
-        Me.TextBox3.Enabled = False
-        Me.TextBox3.Location = New System.Drawing.Point(152, 348)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(227, 22)
-        Me.TextBox3.TabIndex = 19
+        Me.location_txt.Enabled = False
+        Me.location_txt.Location = New System.Drawing.Point(152, 348)
+        Me.location_txt.Margin = New System.Windows.Forms.Padding(4)
+        Me.location_txt.Name = "location_txt"
+        Me.location_txt.Size = New System.Drawing.Size(227, 22)
+        Me.location_txt.TabIndex = 19
         '
-        'Label9
+        'browse_lbl
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Enabled = False
-        Me.Label9.Location = New System.Drawing.Point(148, 329)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(172, 17)
-        Me.Label9.TabIndex = 20
-        Me.Label9.Text = "Or browser for a location: "
+        Me.browse_lbl.AutoSize = True
+        Me.browse_lbl.Enabled = False
+        Me.browse_lbl.Location = New System.Drawing.Point(148, 329)
+        Me.browse_lbl.Name = "browse_lbl"
+        Me.browse_lbl.Size = New System.Drawing.Size(172, 17)
+        Me.browse_lbl.TabIndex = 20
+        Me.browse_lbl.Text = "Or browser for a location: "
         '
-        'Button6
+        'partition_btn
         '
-        Me.Button6.Location = New System.Drawing.Point(116, 297)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(27, 23)
-        Me.Button6.TabIndex = 21
-        Me.Button6.Text = "1"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.partition_btn.Location = New System.Drawing.Point(116, 297)
+        Me.partition_btn.Name = "partition_btn"
+        Me.partition_btn.Size = New System.Drawing.Size(27, 23)
+        Me.partition_btn.TabIndex = 21
+        Me.partition_btn.Text = "1"
+        Me.partition_btn.UseVisualStyleBackColor = True
         '
-        'Button7
+        'browse_btn
         '
-        Me.Button7.Location = New System.Drawing.Point(116, 326)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(27, 23)
-        Me.Button7.TabIndex = 22
-        Me.Button7.Text = "2"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.browse_btn.Location = New System.Drawing.Point(116, 326)
+        Me.browse_btn.Name = "browse_btn"
+        Me.browse_btn.Size = New System.Drawing.Size(27, 23)
+        Me.browse_btn.TabIndex = 22
+        Me.browse_btn.Text = "2"
+        Me.browse_btn.UseVisualStyleBackColor = True
         '
         'Label10
         '
@@ -288,26 +288,26 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(760, 614)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Button7)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.RichTextBox1)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.browse_btn)
+        Me.Controls.Add(Me.partition_btn)
+        Me.Controls.Add(Me.browse_lbl)
+        Me.Controls.Add(Me.location_txt)
+        Me.Controls.Add(Me.folder_btn)
+        Me.Controls.Add(Me.date_dtp)
+        Me.Controls.Add(Me.refresh_btn)
+        Me.Controls.Add(Me.partition_cb)
+        Me.Controls.Add(Me.partition_lbl)
+        Me.Controls.Add(Me.Proceed_btn)
+        Me.Controls.Add(Me.technician_txt)
+        Me.Controls.Add(Me.macnum_txt)
+        Me.Controls.Add(Me.reason_rtb)
+        Me.Controls.Add(Me.reason_lbl)
+        Me.Controls.Add(Me.technician_lbl)
+        Me.Controls.Add(Me.macnum_lbl)
+        Me.Controls.Add(Me.no_btn)
+        Me.Controls.Add(Me.yes_btn)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.macnumrev_lbl)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
@@ -323,26 +323,26 @@ Partial Class Form1
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents macnumrev_lbl As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents RichTextBox1 As RichTextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Label8 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button4 As Button
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Button5 As Button
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents yes_btn As Button
+    Friend WithEvents no_btn As Button
+    Friend WithEvents macnum_lbl As Label
+    Friend WithEvents technician_lbl As Label
+    Friend WithEvents reason_lbl As Label
+    Friend WithEvents reason_rtb As RichTextBox
+    Friend WithEvents macnum_txt As TextBox
+    Friend WithEvents technician_txt As TextBox
+    Friend WithEvents Proceed_btn As Button
+    Friend WithEvents partition_lbl As Label
+    Friend WithEvents partition_cb As ComboBox
+    Friend WithEvents refresh_btn As Button
+    Friend WithEvents date_dtp As DateTimePicker
+    Friend WithEvents folder_btn As Button
+    Friend WithEvents location_txt As TextBox
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
+    Friend WithEvents browse_lbl As Label
+    Friend WithEvents partition_btn As Button
+    Friend WithEvents browse_btn As Button
     Friend WithEvents Label10 As Label
 End Class

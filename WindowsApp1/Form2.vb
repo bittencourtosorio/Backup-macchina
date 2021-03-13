@@ -28,7 +28,7 @@ Public Class Form2
         razao1 = Form1.GlobalVariables.razao
         maquina1 = Form1.GlobalVariables.maquina
         tecnico1 = Form1.GlobalVariables.tecnico
-        timer1 = Form1.DateTimePicker1.Value.ToString("dd-MM-yyyy")
+        timer1 = Form1.date_dtp.Value.ToString("dd-MM-yyyy")
         particao1 = Form1.GlobalVariables.particao
         GlobalVariables.pasta1 = "\"
 
