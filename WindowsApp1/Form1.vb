@@ -10,9 +10,12 @@ Public Class Form1
         Public Shared particao As String
         Public Shared razao As String
         Public Shared data As String
+        Public Shared hora As String
         Public Shared drive As String
         Public Shared endereco As Boolean
         Public Shared root As String
+        Public Shared readValue As String
+
 
     End Class
 
@@ -26,9 +29,10 @@ Public Class Form1
         date_dtp.Format = DateTimePickerFormat.Short
         date_dtp.Value.ToString("dd-mm-yyyy")
 
+
         'Get machine number from the registry or from PC name
-        Dim readValue = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\100\Machines", "OriginalMachineName", Nothing)
-        If readValue = Nothing Then Label2.Text = System.Windows.Forms.SystemInformation.ComputerName Else Label2.Text = readValue
+        GlobalVariables.readValue = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\100\Machines", "OriginalMachineName", Nothing)
+        If GlobalVariables.readValue = Nothing Then Label2.Text = System.Windows.Forms.SystemInformation.ComputerName Else Label2.Text = GlobalVariables.readValue
         partition_cb.Items.AddRange(System.IO.Directory.GetLogicalDrives)
 
     End Sub
@@ -53,6 +57,7 @@ Public Class Form1
         Dim tec As Integer
         Dim num As Integer
         GlobalVariables.data = date_dtp.Value.ToString("dd-mm-yyyy")
+        GlobalVariables.hora = date_dtp.Value.ToString("hh:mm:ss")
         GlobalVariables.razao = reason_rtb.Text
         GlobalVariables.particao = partition_cb.SelectedItem
         GlobalVariables.tecnico = technician_txt.Text
@@ -65,6 +70,7 @@ Public Class Form1
             GlobalVariables.endereco = True
         End If
 
+        'Control if all data are in
         selection = 0
         If partition_cb.Text <> "" Then
             selection = 1
@@ -102,7 +108,7 @@ Public Class Form1
 
     End Sub
 
-    'Refreshes the Drives conected to the machine
+    'Refreshes the Drives connected to the machine
     Private Sub Refresh_btn_Click(sender As Object, e As EventArgs) Handles refresh_btn.Click
         partition_cb.Items.Clear()
         partition_cb.Items.AddRange(System.IO.Directory.GetLogicalDrives)

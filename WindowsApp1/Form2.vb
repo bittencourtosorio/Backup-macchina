@@ -1,14 +1,9 @@
-﻿Imports System.ComponentModel
-Imports System.Drawing.Text
-Imports System.IO
-Imports System.Linq.Expressions
-Imports System.Reflection.Emit
-Imports System.Runtime.InteropServices
-Imports System.Security
-Imports System.Security.Cryptography.X509Certificates
-Imports Microsoft.VisualBasic.CompilerServices
+﻿Imports System.IO
+Imports System.Data.SqlClient
+Imports System.ServiceProcess
 
 Public Class Form2
+
     'Global Variables declaration
     Public Class GlobalVariables
         Public Shared pasta As String
@@ -20,6 +15,7 @@ Public Class Form2
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Dim timer1 As String
+        Dim timer2 As String
         Dim razao1 As String
         Dim maquina1 As String
         Dim tecnico1 As String
@@ -29,6 +25,7 @@ Public Class Form2
         maquina1 = Form1.GlobalVariables.maquina
         tecnico1 = Form1.GlobalVariables.tecnico
         timer1 = Form1.date_dtp.Value.ToString("dd-MM-yyyy")
+        timer2 = Form1.date_dtp.Value.ToString("hh:mm:ss")
         particao1 = Form1.GlobalVariables.particao
         GlobalVariables.pasta1 = "\"
 
@@ -47,6 +44,7 @@ Public Class Form2
         'Creating README file
         Using writer As New StreamWriter(backup & GlobalVariables.pasta1 & "README.txt", True)
             writer.WriteLine(timer1)
+            writer.WriteLine(timer2)
             writer.WriteLine("")
             writer.WriteLine(maquina1)
             writer.WriteLine("")
@@ -282,11 +280,41 @@ WWM:
         GoTo Fim
 
 ToolStudio:
-
-
+        ' Private cn As New SqlConnection("Data Sorce=" & Form1.GlobalVariables.readValue & "\TOOLSTUDIO; ")
+        Me.Hide()
+        TSBackup.Show()
 Hard:
 
+        Try
+            Console.WriteLine("Stoping the service...")
+            ServiceController1.Stop()
+            ServiceController1.WaitForStatus(ServiceControllerStatus.Running)
+            Console.WriteLine("The service is now " & ServiceController1.Status.ToString)
 
+        Catch ex As Exception
+            Console.WriteLine("Error in stoping the service: " & ex.Message)
+        End Try
+
+        '        Dim folderPath As String = "C:\Program Files (x86)\Microsoft SQL Server\MSSQL10_50.TOOLSTUDIO\MSSQL\DATA"
+        '       Dim folderPath1 As String = "C:\Program Files\Microsoft SQL Server\MSSQL10_50.TOOLSTUDIO\MSSQL\DATA"
+        '      Dim ts As String = "D:\teste" 'backup & GlobalVariables.pasta1 & "PC" & GlobalVariables.pasta1 & "TOOLSTUDIO" & GlobalVariables.pasta1 & "DATA"
+
+        '      If Directory.Exists(folderPath) Then
+        '     My.Computer.FileSystem.CopyDirectory(folderPath, ts, True)
+        '    ElseIf Directory.Exists(folderPath1) Then
+        '   My.Computer.FileSystem.CopyDirectory(folderPath1, ts, True)
+
+        '   End If
+
+        '       Try
+        '      Console.WriteLine("Starting the service...")
+        '     ServiceController1.Start()
+        '    ServiceController1.WaitForStatus(ServiceControllerStatus.Running)
+        '   Console.WriteLine("The service is now " & ServiceController1.Status.ToString)
+
+        '   Catch ex As Exception
+        '  Console.WriteLine("Error in starting the service: " & ex.Message)
+        ' End Try
 Complete:
 
 
